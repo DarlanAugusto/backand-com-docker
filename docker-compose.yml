@@ -5,6 +5,8 @@ php:
     - "443:443"
   volumes:
     - ./www:/var/html
+  links:
+    - db
 
 db:
   image: mysql:5.7
