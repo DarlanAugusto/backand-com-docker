@@ -5,3 +5,11 @@ php:
     - "443:443"
   volumes:
     - ./www:/var/html
+
+db:
+  image: mysql:5.7
+  volumes:
+    - /var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=myrootpass
+    - MYSQL_DATABASE=mydb
